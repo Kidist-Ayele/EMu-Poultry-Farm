@@ -24,7 +24,7 @@ Welcome to the **EMU Portfolio Website** – a personal, creative space designed
 - **Netlify** – Deployment platform
 
 ---
-
+## 📁 Folder Structure
 ```plaintext
 src/
 ├── assets/
