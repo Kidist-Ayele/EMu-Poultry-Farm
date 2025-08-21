@@ -33,5 +33,5 @@ src/
 └── main.jsx
 ```
 
-
-
+## 📷 Prereview
+<img width="1348" height="646" alt="image" src="https://github.com/user-attachments/assets/ea060a46-5785-4779-b0d9-9110f0c178af" />
