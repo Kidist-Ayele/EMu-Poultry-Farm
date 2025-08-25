@@ -1,34 +1,69 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './About.css'
 import about_img from '../../assets/about.png'
 import play_icon from '../../assets/play.png'
 
 const About = () => {
-  return (
-    <div className='about'>
-      <div className="about-left">
-        <img src={about_img} alt="" className='about-img'/>
-        <img src={play_icon} alt="" className='play-icon'/>
-      </div>
-      <div className="about-right">
-        <h3>ABOUT EMU POULTRY FARM</h3>
-        <h2>From clean farms come clean food.</h2>
-        <p>At EMu Poultry Farm, we are dedicated to raising healthy, 
-            high-quality poultry through ethical and sustainable farming practices. 
-            Located in a clean and well-managed environment, our farm is built on a 
-            foundation of care—for the animals, the people we serve, and the environment.</p>
-        <p>Our operations focus on delivering fresh and dependable poultry products to 
-            individuals, markets, and businesses. We follow strict hygiene and health 
-            standards to ensure every product we offer is safe, nutritious, and responsibly 
-            sourced. From daily farm routines to long-term planning, we aim to exceed expectations 
-            in every step of our process.</p>
-        <p>We believe in doing more than just farming. Our goal is to contribute to 
-            food security and create value in our community by offering trustworthy 
-            poultry solutions. Whether you're a local buyer or a partner, EMu Poultry 
-            Farm is committed to quality, transparency, and growth together.</p>
-      </div>
-    </div>
-  )
+    const [showVideo, setShowVideo] = useState(false);
+
+    const handlePlayClick = () => {
+        setShowVideo(true);
+    };
+
+    const handleCloseVideo = () => {
+        setShowVideo(false);
+    };
+
+    return (
+        <div className="about-section">
+            {/* Titles at the top center */}
+            <div className="about-title">
+                <h3>ABOUT EMU POULTRY FARM</h3>
+                <h2>From clean farms come clean food.</h2>
+            </div>
+            
+            {/* Two cards container */}
+            <div className="about-cards">
+                {/* Video Card */}
+                <div className="video-card">
+                    <div className="video-container">
+                        <img src={about_img} alt="About EMu Poultry Farm" className="about-img" />
+                        <img 
+                            src={play_icon} 
+                            alt="Play Video" 
+                            className="play-icon"
+                            onClick={handlePlayClick}
+                        />
+                    </div>
+                </div>
+
+                {/* Description Card */}
+                <div className="description-card">
+                    <p>At EMu Poultry Farm, we raise healthy, high-quality poultry through ethical and sustainable farming practices. Our commitment to excellence begins with a clean and well-managed environment where our birds thrive.</p>
+                    <p>We believe in doing more than just farming. Our goal is to contribute to food security while maintaining the highest standards of animal welfare and environmental responsibility. Every step of our process is designed to deliver fresh, dependable products that meet and exceed expectations.</p>
+                    <p>Our foundation is built on care - for our animals, our people, and our environment. We follow strict hygiene and health standards, ensuring that every product from our farm meets the highest quality benchmarks. From our carefully selected feed to our modern facilities, we prioritize the well-being of our poultry and the satisfaction of our customers.</p>
+                </div>
+            </div>
+
+            {/* Video Modal */}
+            {showVideo && (
+                <div className="video-modal" onClick={handleCloseVideo}>
+                    <div className="video-modal-content" onClick={(e) => e.stopPropagation()}>
+                        <button className="video-close-btn" onClick={handleCloseVideo}>×</button>
+                        <video 
+                            className="video-player" 
+                            controls 
+                            autoPlay
+                            muted
+                            src="/chickens_video.mp4"
+                        >
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            )}
+        </div>
+    )
 }
 
 export default About

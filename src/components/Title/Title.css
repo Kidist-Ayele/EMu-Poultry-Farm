@@ -5,6 +5,7 @@
     font-weight: 600;
     text-transform: uppercase;
     margin: 70px 0 30px;
+    letter-spacing: 1px;
 }
 
 .title h2{
@@ -12,4 +13,37 @@
     color: #000F38;
     margin-top: 5px;
     text-transform: none;
+    font-weight: 600;
+}
+
+/* .......media query ........ */
+
+@media (max-width: 768px) {
+    .title{
+        margin: 50px 0 25px;
+        font-size: 14px;
+    }
+    .title h2{
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .title{
+        margin: 40px 0 20px;
+        font-size: 13px;
+    }
+    .title h2{
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title{
+        margin: 30px 0 15px;
+        font-size: 12px;
+    }
+    .title h2{
+        font-size: 20px;
+    }
 }
