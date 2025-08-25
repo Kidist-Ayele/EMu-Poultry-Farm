@@ -62,9 +62,19 @@
 
 .slide img{
     width: 65px;
+    height: 65px;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 15px;
     border: 4px solid #212EA0;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(33, 46, 160, 0.2);
+    transition: all 0.3s ease;
+}
+
+.slide:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(33, 46, 160, 0.3);
+    border-color: #ffd700;
 }
 
 .user-info{
@@ -107,7 +117,9 @@
     }
     .slide img{
         width: 50px;
+        height: 50px;
         border: 3px solid #212EA0;
+        margin-right: 12px;
     }
 }
 
@@ -151,6 +163,8 @@
     }
     .slide img{
         width: 40px;
+        height: 40px;
         border: 2px solid #212EA0;
+        margin-right: 10px;
     }
 }

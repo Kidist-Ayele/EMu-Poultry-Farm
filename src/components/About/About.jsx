@@ -15,7 +15,7 @@ const About = () => {
     };
 
     return (
-        <div className="about-section">
+        <div className="about-section" id="about">
             {/* Titles at the top center */}
             <div className="about-title">
                 <h3>ABOUT EMU POULTRY FARM</h3>

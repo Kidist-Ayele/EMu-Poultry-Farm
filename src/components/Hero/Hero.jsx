@@ -55,11 +55,11 @@ const Hero = () => {
                         </div>
                         <div className="explore-stats">
                             <div className="stat">
-                                <h4>5000+</h4>
+                                <h4>1000+</h4>
                                 <p>Happy Customers</p>
                             </div>
                             <div className="stat">
-                                <h4>10+</h4>
+                                <h4>5+</h4>
                                 <p>Years Experience</p>
                             </div>
                             <div className="stat">
